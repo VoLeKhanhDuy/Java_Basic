@@ -1,0 +1,22 @@
+package BaiTap2;
+
+import java.util.Scanner;
+
+public class BT_2 {
+	/*
+	 	Viết chương trình tính giai thừa n
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int soDeTinhGiaiThua, tich = 1;
+		Scanner scan = new Scanner(System.in);
+		soDeTinhGiaiThua = scan.nextInt();
+		
+		for(int i = soDeTinhGiaiThua; i > 1; i--)
+		{
+			tich *= i;
+		}
+		System.out.println(soDeTinhGiaiThua + "! = " + tich);
+	}
+
+}
