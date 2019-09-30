@@ -19,10 +19,7 @@ public class BT_6 {
 	nhapMang(mang, soPhanTu);
 	xuatMang(mang, soPhanTu);
 	
-	if(timMax(mang, soPhanTu) == -999)
-	{
-		print("Mang khong co so lon thu 2!!");
-	}else
+	
 	print("So lon thu 2 trong mang la: " + timMax(mang, soPhanTu));
 }
 	
@@ -42,13 +39,6 @@ public class BT_6 {
 			{
 				if(mang[i] != mang[j])
 					break;
-				if(i == soPhanTu -2 && j == soPhanTu -1)
-				{
-					if(mang[soPhanTu -2] == mang[soPhanTu-1])
-						return -999;
-					else
-						break;
-				}
 			}
 		}
 		
