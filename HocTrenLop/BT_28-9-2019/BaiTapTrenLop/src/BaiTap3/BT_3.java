@@ -1,0 +1,43 @@
+package BaiTap3;
+
+import java.util.Scanner;
+
+public class BT_3 {
+	/* 
+	 * Viet chuong trinh tinh tong S = 1! + 2! + .... n!
+	*/
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int soDeTinhGiaiThua ;
+		long tong = 0;
+		Scanner scan = new Scanner(System.in);
+		do{
+			System.out.println("Nhap vao so de tinh giai thua: ");
+			soDeTinhGiaiThua = scan.nextInt();
+			if(soDeTinhGiaiThua < 0) 
+				System.out.println("Giai thua khong am!!");
+		}while(soDeTinhGiaiThua < 0);
+		
+		System.out.print("1! + 2! + 3! + ... + n! = ");
+		for(int i = 1; i <= soDeTinhGiaiThua; i++)
+		{
+			tong += tinhGiaiThua(i);
+		}
+		System.out.print(tong);
+	}
+	
+	public static long tinhGiaiThua(int soDeTinhGiaiThua)
+	{
+		int tich = 1;
+		if(soDeTinhGiaiThua == 0 || soDeTinhGiaiThua == 1)
+			tich = 1;
+		else{
+			for(int i = soDeTinhGiaiThua; i > 1; i--)
+			{
+				tich *= i;
+			}
+		}
+		return tich;
+	}
+
+}
